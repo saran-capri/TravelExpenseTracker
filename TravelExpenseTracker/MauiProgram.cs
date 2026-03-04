@@ -26,6 +26,7 @@ public static class MauiProgram
 		builder.Services.AddTransient<RegisterViewModel>().AddTransient<RegisterPage>();
 		builder.Services.AddSingleton<HomeViewModel>().AddSingleton<MainPage>();
 		builder.Services.AddSingleton<TripsViewModel>().AddSingleton<TripsPage>();
+		builder.Services.AddSingleton<SettingsViewModel>().AddSingleton<SettingsPage>();
 
 
 		return builder.Build();

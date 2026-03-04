@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TravelExpenseTracker.Pages.SettingsPage"
+             xmlns:model="clr-namespace:TravelExpenseTracker.Models"
+             xmlns:vm="clr-namespace:TravelExpenseTracker.ViewModels"
+             BackgroundColor="#FFF7ECEC"
+             x:DataType="vm:SettingsViewModel"
+             Title="Settings">
+
+
+             <ContentPage.Resources>
+                <ResourceDictionary>
+                    <Style x:Key="menuLabel" TargetType="Label">
+                        <Setter Property="FontSize" Value="16"/>
+                        <Setter Property="VerticalOptions" Value="Center"/>
+                    </Style>
+                    <Style x:Key="menuIcon" TargetType="Image">
+                        <Setter Property="WidthRequest" Value="20"/>
+                        <Setter Property="VerticalOptions" Value="Center"/>
+                    </Style>
+                </ResourceDictionary>
+             </ContentPage.Resources>
+
+            <Grid RowDefinitions="Auto, *, Auto" Padding="15" RowSpacing="25">
+                <VerticalStackLayout Grid.Row="0">
+                    <Border BackgroundColor="{StaticResource Primary}" HeightRequest="80" WidthRequest="80" StrokeShape="RoundRectangle 40" StrokeThickness="5">
+                        <Label HorizontalOptions="Center" Text="{Binding Initial}" VerticalOptions="Center" FontSize="40" FontAttributes="Bold" TextColor="white"/>
+                    </Border>
+                    <Label Text="{Binding Name}" HorizontalOptions="Center" FontSize="20"/>
+                </VerticalStackLayout>
+                
+                <Border Grid.Row="1" StrokeShape="RoundRectangle 15" BackgroundColor="LightGray" Padding="15" StrokeThickness="0" VerticalOptions="Start"> <!--Grid.Row="1" Padding="15" -->
+                <VerticalStackLayout BackgroundColor="LightGray" VerticalOptions="Start" Spacing="15">
+
+                    <Grid RowDefinitions="Auto, 1" ColumnDefinitions="20,*,20" ColumnSpacing="5" RowSpacing="5">
+                        <Image Grid.Column="0" Source="pencil.png" Style="{StaticResource menuIcon}"/>
+                        <Label Grid.Column="1" Text="Edit Name" Style="{StaticResource menuLabel}"/>
+                        <Image Grid.Column="2" Source="right.png" Style="{StaticResource menuIcon}"/>
+
+                        <BoxView Grid.Row="1" Grid.Column="1" Color="DarkGray" Grid.ColumnSpan="3" HeightRequest="0.5"/>
+                    </Grid>
+
+
+                    <Grid RowDefinitions="Auto, 1" ColumnDefinitions="20,*,20" ColumnSpacing="5" RowSpacing="5">
+                        <Image Grid.Column="0" Source="lock.png" Style="{StaticResource menuIcon}"/>
+                        <Label Grid.Column="1" Text="Change Password" Style="{StaticResource menuLabel}"/>
+                        <Image Grid.Column="2" Source="right.png" Style="{StaticResource menuIcon}"/>
+
+                        <BoxView Grid.Row="1" Grid.Column="1" Color="DarkGray" Grid.ColumnSpan="3" HeightRequest="0.5"/>
+                    </Grid>
+
+                    <Grid RowDefinitions="Auto, 1" ColumnDefinitions="20,*,20" ColumnSpacing="5" RowSpacing="5">
+                        <Image Grid.Column="0" Source="category.png" Style="{StaticResource menuIcon}"/>
+                        <Label Grid.Column="1" Text="Manage Expense Categories" Style="{StaticResource menuLabel}"/>
+                        <Image Grid.Column="2" Source="right.png" Style="{StaticResource menuIcon}"/>
+
+                        <BoxView Grid.Row="1" Grid.Column="1" Color="DarkGray" Grid.ColumnSpan="3" HeightRequest="0.5"/>
+                    </Grid>
+
+                    <Grid RowDefinitions="Auto, 1" ColumnDefinitions="20,*,20" ColumnSpacing="5" RowSpacing="5">
+                        <Image Grid.Column="0" Source="info.png" Style="{StaticResource menuIcon}"/>
+                        <Label Grid.Column="1" Text="Developed by Saran kumar" Style="{StaticResource menuLabel}"/>
+                        <Image Grid.Column="2" Source="right.png" Style="{StaticResource menuIcon}"/>
+                    </Grid>
+
+                </VerticalStackLayout>
+                </Border>
+                <Button Grid.Row="2" Text="Logout" HorizontalOptions="Center" Style="{StaticResource btnSm}" Padding="25,4" Background="Red"/>
+            
+            
+            </Grid>
+</ContentPage>

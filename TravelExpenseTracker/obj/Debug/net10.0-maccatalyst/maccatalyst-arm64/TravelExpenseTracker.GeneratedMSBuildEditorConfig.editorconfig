@@ -82,6 +82,26 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
+[/Users/sarankumar/Desktop/MAUI-Project/TravelExpenseTracker/TravelExpenseTracker/Pages/SaveTripPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TravelExpenseTracker.Pages.SaveTripPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/SaveTripPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/SaveTripPage.xaml
+build_metadata.AdditionalFiles.Inflator = Runtime
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[/Users/sarankumar/Desktop/MAUI-Project/TravelExpenseTracker/TravelExpenseTracker/Pages/SettingsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TravelExpenseTracker.Pages.SettingsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/SettingsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/SettingsPage.xaml
+build_metadata.AdditionalFiles.Inflator = Runtime
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
 [/Users/sarankumar/Desktop/MAUI-Project/TravelExpenseTracker/TravelExpenseTracker/Pages/TripsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TravelExpenseTracker.Pages.TripsPage.xaml
