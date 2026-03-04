@@ -1,0 +1,27 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TravelExpenseTracker"
+             x:Class="TravelExpenseTracker.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <!-- <Style x:Key="entryWrapper" TargetType="Border">
+                <Setter Property="Padding" Value="10, 0"/>
+                <Setter Property="BackgroundColor" Value="AliceBlue"/>
+                <Setter Property="StrokeShape" Value="RoundRectangle 22"/>
+                <Setter Property="StrokeThickness" Value="0"/>
+            </Style> -->
+            <Style x:Key="btnSm" TargetType="Button">
+                <Setter Property="MinimumHeightRequest" Value="30"/>
+                <Setter Property="HeightRequest" Value="30"/>
+                <Setter Property="CornerRadius" Value="15"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="Padding" Value="14,5"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

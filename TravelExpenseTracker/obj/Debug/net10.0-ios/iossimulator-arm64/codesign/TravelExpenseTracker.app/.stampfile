@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - --entitlements /Users/sarankumar/Desktop/MAUI-Project/TravelExpenseTracker/TravelExpenseTracker/obj/Debug/net10.0-ios/iossimulator-arm64/Entitlements.xcent /Users/sarankumar/Desktop/MAUI-Project/TravelExpenseTracker/TravelExpenseTracker/bin/Debug/net10.0-ios/iossimulator-arm64/TravelExpenseTracker.app

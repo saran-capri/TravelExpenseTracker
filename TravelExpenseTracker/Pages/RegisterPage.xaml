@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TravelExpenseTracker.Pages.RegisterPage"
+             xmlns:controls="clr-namespace:TravelExpenseTracker.Controls"
+             xmlns:vm="clr-namespace:TravelExpenseTracker.ViewModels"
+             x:DataType="vm:RegisterViewModel">
+             <ContentPage.Resources>
+                <ResourceDictionary>
+                    <Style x:Key="appName" TargetType="Label" >
+                        <Setter Property="FontSize" Value="24"/>
+                        <Setter Property="FontAttributes" Value="Bold"/>
+                        <Setter Property="HorizontalOptions" Value="Center"/>
+                    </Style>
+                </ResourceDictionary>
+             </ContentPage.Resources>
+
+    <Grid RowDefinitions="Auto, Auto, Auto, *" RowSpacing="15">
+        <VerticalStackLayout
+            Grid.Row="0"
+            Margin="0,50,0,0" 
+            HorizontalOptions="Center">
+            <Image Source="logo.png" HeightRequest="150"/>
+            <Label Style="{StaticResource appName}" Text="Travel Expense Tracker"/>
+        </VerticalStackLayout>
+        <Label 
+            Grid.Row="1" 
+            HorizontalOptions="Center" 
+            FontSize="22" 
+            Text="Welcome Here!" />
+        <VerticalStackLayout 
+            Grid.Row="2"
+            Padding="25" 
+            Spacing="20">
+            <!-- <Border Style="{StaticResource entryWrapper}">
+            <controls:BorderlessEntry BackgroundColor="AliceBlue" Placeholder="Email"/>
+            </Border> -->
+            <Entry Placeholder="Name"/>
+            <Entry Placeholder="Email"/>
+            <!-- <controls:BorderlessEntry BackgroundColor="AliceBlue" Placeholder="Email"/> -->
+            <Entry Placeholder="Password" IsPassword="True"/>
+            <Button Text="Register" FontAttributes="Bold" CornerRadius="22"/>
+            <Label 
+                HorizontalOptions="Center"
+                Text="Already have an account? Login" 
+                TextColor="DarkBlue" >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding NavigateBackCommand}"/>
+                </Label.GestureRecognizers>
+            </Label>    
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

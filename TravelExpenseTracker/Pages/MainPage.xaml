@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TravelExpenseTracker.Pages.MainPage"
+             xmlns:model="clr-namespace:TravelExpenseTracker.Models"
+             xmlns:vm="clr-namespace:TravelExpenseTracker.ViewModels"
+             Title="Travel Expense Manager"
+             BackgroundColor="#FFF7ECEC"
+             x:DataType="vm:HomeViewModel">
+            <Grid RowDefinitions="350, Auto, *" RowSpacing="5">
+                <Image Grid.Row="0" 
+                    Source ="trip_image.png"
+                    HeightRequest="350"
+                    Aspect="AspectFill"
+                    VerticalOptions="Start"/>
+                <Grid Grid.Row="1" 
+                    ColumnDefinitions="Auto, *, Auto" Padding="15, 0">
+                    <Label Grid.Column="0" 
+                        Text="Recent Trips"
+                        FontSize="20"/>
+                    <Button Grid.Column="2"
+                        Command="{Binding AddTripTempCommand}" 
+                        Text="+Add a Trip" 
+                        VerticalOptions="Start"
+                        Style="{StaticResource btnSm}"/>
+                </Grid>
+                <CollectionView Grid.Row="2" ItemsSource="{Binding Trips}" Margin="15, 0">
+                    <CollectionView.EmptyView>
+                        <VerticalStackLayout 
+                            HorizontalOptions="Center"
+                            Spacing="10" 
+                            Padding="25" 
+                            Margin="0, 50, 0, 0">
+                            <Label Text="No trips yet" FontSize="25" TextColor="DarkGray"/>
+                            <Button
+                            Command="{Binding AddTripTempCommand}" 
+                            Text="+Add a Trip" 
+                            VerticalOptions="Start"
+                            Style="{StaticResource btnSm}"
+                            HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </CollectionView.EmptyView>
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Span="2" Orientation="Vertical" VerticalItemSpacing="15" HorizontalItemSpacing="15"/>
+                    </CollectionView.ItemsLayout> 
+
+                    <CollectionView.ItemTemplate>  
+                    <DataTemplate x:DataType="model:TripModel">
+                        <Border 
+                            StrokeShape="RoundRectangle 15" 
+                            BackgroundColor="White"
+                            StrokeThickness="0">
+                            <VerticalStackLayout>
+                                <Image HeightRequest="100" Source="{Binding Image}"/>
+                                <Label Text="{Binding Title}" FontSize="16" Padding="10, 0"/>
+                                <Label Text="{Binding Location}" FontSize="12" Padding="10, 0"/>
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+</ContentPage>
